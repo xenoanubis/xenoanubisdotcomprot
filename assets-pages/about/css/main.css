@@ -1,0 +1,25 @@
+body 
+{
+background-color: #2b2d2b;
+color: #b7dc12;
+    font-family:Arial, Helvetica, sans-serif
+}
+h1
+{
+    color:black;
+    text-shadow: 0px 0px 2px white, 0 0 8px #cfff1e;
+    font-family:Arial, Helvetica, sans-serif
+}
+a {
+color: rgb(216, 220, 11);
+}
+a:visited {
+color: whitesmoke;
+}	
+a:hover, a:active {
+color: rgb(223, 255, 14);
+}
+hr
+{
+    color:black;  
+}   

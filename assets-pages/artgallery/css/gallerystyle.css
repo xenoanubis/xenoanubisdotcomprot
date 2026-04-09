@@ -1,0 +1,154 @@
+body 
+{
+    background-color: #0a0a0a;
+    color: #A8B007;
+    font-family:Arial, Helvetica, sans-serif;
+   /* display: grid;
+        gap: 3px;
+        grid-template-rows: 5vw 1vw repeat(3, 10vw) 5vw;
+        grid-template-columns: 0.10fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.10fr;
+        grid-template-areas:
+        '. . header header header header header . .' 
+        '. . . . . . . .  .'
+        '. main main main main main main main .'
+        '. main main main main main main main .'
+        '. main main main main main main main .'
+        'footer footer footer footer footer footer footer footer footer'*/
+
+}
+header
+{
+    grid-area: header;
+}
+h1
+{
+    color:rgb(0, 0, 0);
+    text-shadow:
+    0px 0px 3px rgb(255, 255, 255),
+     1px 0px 2px #E7F20A,
+      0px 1px 2px #E7F20A,
+       -1px 0px 2px #E7F20A,
+        0px -1px 2px #E7F20A;;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+
+a {
+color: rgb(216, 220, 11);
+}
+a:visited {
+color: whitesmoke;
+}	
+a:hover, a:active {
+color: rgb(223, 255, 14);
+} 
+main
+{
+    grid-area: main;
+    background-color: #313131;
+} 
+footer
+{
+    grid-area: footer;
+}
+
+/*borrowed from https://stackoverflow.com/questions/69516791/about-implement-single-html-page-with-multiple-tabs-via-css-with-or-without-java */
+.gallery1,
+.gallery2,
+.gallery3 {
+    display: none;
+    padding: 20px;
+    border-top: 2px solid #383838;
+}
+
+input[type='radio'] {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+label {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 30px;
+    background-color: #313131;
+    border-style: solid solid none solid;
+    border-width: 2px;
+    border-color: transparent;
+}
+
+#tab1:checked+label {
+    border-color: #E7F20A;
+}
+
+#tab2:checked+label {
+    border-color: #E7F20A;
+}
+
+#tab3:checked+label {
+    border-color: #E7F20A;
+}
+
+#tab1:checked~.gallery1 {
+    display: block;
+}
+
+#tab2:checked~.gallery2 {
+    display: block;
+}
+
+#tab3:checked~.gallery3 {
+    display: block;
+}
+/*tabbing code end*/
+
+div.gallery_image { border: 1px solid #313131;
+   margin: auto;
+
+
+}
+div.gallery_image:hover {
+    border-color:#E7F20A;
+}
+div.gallery_image img {
+    width: 90%;
+  height: fit-content;
+   display: block;
+   margin: auto;
+   padding: 5px;
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+  }
+ div.gallery {
+    padding: 5px;
+    float: left;
+    width: 24.99999%;
+    margin-bottom: 5px;
+  }
+  
+@media only screen and (max-width: 700px) {
+    .gallery {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .gallery {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

@@ -1,0 +1,130 @@
+body 
+{
+    background-color: #0a0a0a;
+    color: #A8B007;
+    font-family:Arial, Helvetica, sans-serif;
+   /* display: grid;
+        gap: 3px;
+        grid-template-rows: 5vw 1vw repeat(3, 10vw) 5vw;
+        grid-template-columns: 0.10fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.10fr;
+        grid-template-areas:
+        '. . header header header header header . .' 
+        '. . . . . . . .  .'
+        '. main main main main main main main .'
+        '. main main main main main main main .'
+        '. main main main main main main main .'
+        'footer footer footer footer footer footer footer footer footer'*/
+
+}
+header
+{
+    grid-area: header;
+}
+h1
+{
+    color:rgb(0, 0, 0);
+    text-shadow:
+    0px 0px 3px rgb(255, 255, 255),
+     1px 0px 2px #E7F20A,
+      0px 1px 2px #E7F20A,
+       -1px 0px 2px #E7F20A,
+        0px -1px 2px #E7F20A;;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+
+a {
+color: rgb(216, 220, 11);
+}
+a:visited {
+color: whitesmoke;
+}	
+a:hover, a:active {
+color: rgb(223, 255, 14);
+} 
+main
+{
+    grid-area: main;
+    background-color: #313131;
+} 
+footer
+{
+    grid-area: footer;
+}
+.gallery1
+{
+    font-size: 16pt;
+    color: #0a0a0a;
+    background-color: #d8d2c7;
+    box-shadow: inset 0px 0px 10px #000000;
+}
+/*borrowed from https://stackoverflow.com/questions/69516791/about-implement-single-html-page-with-multiple-tabs-via-css-with-or-without-java */
+.gallery1,
+.gallery2,
+.gallery3,
+.gallery4,
+.gallery5,
+.gallery6 {
+    display: none;
+    padding: 20px;
+    border-top: 2px solid #383838;
+}
+
+
+input[type='radio'] {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+label {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 30px;
+    background-color: #313131;
+    border-style: solid solid none solid;
+    border-width: 2px;
+    border-color: transparent;
+}
+
+#tab1:checked+label,
+#tab2:checked+label,
+#tab3:checked+label,
+#tab4:checked+label,
+#tab5:checked+label,
+#tab6:checked+label
+{
+    border-color: #E7F20A;
+}
+
+
+#tab1:checked~.gallery1,
+#tab2:checked~.gallery2,
+#tab3:checked~.gallery3,
+#tab4:checked~.gallery4,
+#tab5:checked~.gallery5,
+#tab6:checked~.gallery6
+{
+    display: block;
+}
+
+
+/*tabbing code end*/
+
+  
+@media only screen and (max-width: 700px) {
+    .gallery {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
