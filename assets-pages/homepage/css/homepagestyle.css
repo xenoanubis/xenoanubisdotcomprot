@@ -92,7 +92,7 @@ margin-right: 40px;
     margin-right: 2vw;
     margin-bottom: 50px;
     margin-top: 50px; 
-      
+    padding-right: 10px;  
 }
 footer{
     grid-area: footer;
