@@ -155,7 +155,10 @@ footer{
     text-shadow: 0px 0px 3px #b4b4b4;
     margin-left: 40px;
     margin-right: 40px;
-
+    }
+    .main p
+    {
+    overflow-y: auto;    
     }
     .head-img
     {
