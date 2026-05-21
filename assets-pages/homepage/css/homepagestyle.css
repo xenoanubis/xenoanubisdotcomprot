@@ -156,10 +156,7 @@ footer{
     margin-left: 40px;
     margin-right: 40px;
     }
-    .main p
-    {
-    overflow-y: auto;    
-    }
+
     .head-img
     {
     display: flex;
